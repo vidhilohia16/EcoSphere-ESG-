@@ -1007,6 +1007,39 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media(max-width: 600px) {
+  .app-header {
+    padding: 0 12px;
+    height: 60px;
+  }
+  
+  .app-header label {
+    display: none !important;
+  }
+  
+  .header-actions {
+    gap: 8px !important;
+  }
+
+  .profile-selector-container {
+    padding: 4px 8px;
+  }
+
+  .profile-select {
+    font-size: 0.75rem;
+    max-width: 135px;
+  }
+
+  .profile-role {
+    font-size: 0.7rem;
+  }
+
+  .page-content {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
 /* Scroll Reveal animation */
 .scroll-reveal {
   opacity: 0;

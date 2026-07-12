@@ -227,7 +227,7 @@ export default function Environmental({ data, refreshData }) {
                         </span>
                       </div>
                       <div className="bar-chart-track" style={{ height: '10px' }}>
-                        <div className="bar-chart-fill" style={{ width: `${percent}%`, backgroundColor: goal.status === 'Completed' ? 'var(--primary)' : 'var(--secondary)' }} />
+                        <div className="bar-chart-fill" style={{ width: `${percent}%`, backgroundColor: 'var(--primary)' }} />
                       </div>
                       <div style={{ display: 'flex', justifySelf: 'stretch', justifyContent: 'space-between', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                         <span>Current: {goal.currentValue.toLocaleString()} {goal.unit}</span>
