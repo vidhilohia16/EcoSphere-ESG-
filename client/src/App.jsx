@@ -14,6 +14,7 @@ export default function App() {
   const [selectedEmpId, setSelectedEmpId] = useState('');
   const [currentUser, setCurrentUser] = useState(null);
   const [notifStack, setNotifStack] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     fetchDashboard();
@@ -86,50 +87,96 @@ export default function App() {
   return (
     <div className="app-container">
       {/* Sidebar Navigation */}
-      <aside className="sidebar">
-        <div className="sidebar-brand">
-          <div className="brand-logo">🌐</div>
-          <div>
-            <h1 className="brand-title">EcoSphere</h1>
-            <span style={{ fontSize: '0.65rem', color: 'var(--primary)', letterSpacing: '1px', textTransform: 'uppercase' }}>ERP ESG Engine</span>
+      <aside className={`app-sidebar ${isSidebarOpen ? 'mobile-visible' : ''}`}>
+        <div className="sidebar-logo">
+          <div className="sidebar-logo-icon">🌐</div>
+          <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+            <span className="sidebar-logo-text">EcoSphere</span>
+            <span style={{ fontSize: '0.65rem', color: 'var(--primary)', letterSpacing: '1px', textTransform: 'uppercase', lineHeight: 1 }}>ERP ESG Engine</span>
           </div>
+          <button 
+            className="mobile-close-btn"
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'var(--text-secondary)',
+              fontSize: '1.25rem',
+              cursor: 'pointer',
+              display: 'none',
+              padding: '6px',
+              lineHeight: 1
+            }}
+            onClick={() => setIsSidebarOpen(false)}
+          >
+            ✕
+          </button>
         </div>
 
-        <nav className="sidebar-nav">
-          <button className={`nav-link ${activeTab === 'dashboard' ? 'active' : ''}`} onClick={() => setActiveTab('dashboard')}>
-            <span className="nav-icon">📊</span> Dashboard Meter
-          </button>
-          <button className={`nav-link ${activeTab === 'environmental' ? 'active' : ''}`} onClick={() => setActiveTab('environmental')}>
-            <span className="nav-icon">🌱</span> Environmental
-          </button>
-          <button className={`nav-link ${activeTab === 'social' ? 'active' : ''}`} onClick={() => setActiveTab('social')}>
-            <span className="nav-icon">🤝</span> Social Impact
-          </button>
-          <button className={`nav-link ${activeTab === 'governance' ? 'active' : ''}`} onClick={() => setActiveTab('governance')}>
-            <span className="nav-icon">🛡️</span> Governance
-          </button>
-          <button className={`nav-link ${activeTab === 'gamification' ? 'active' : ''}`} onClick={() => setActiveTab('gamification')}>
-            <span className="nav-icon">🏆</span> Gamification
-          </button>
-          <button className={`nav-link ${activeTab === 'reports' ? 'active' : ''}`} onClick={() => setActiveTab('reports')}>
-            <span className="nav-icon">📖</span> Reports Builder
-          </button>
-          <button className={`nav-link ${activeTab === 'admin' ? 'active' : ''}`} onClick={() => setActiveTab('admin')}>
-            <span className="nav-icon">⚙️</span> Administration
-          </button>
-        </nav>
+        <ul className="sidebar-menu">
+          <li className="sidebar-item">
+            <button className={`sidebar-link ${activeTab === 'dashboard' ? 'active' : ''}`} style={{ background: 'transparent', border: 'none', width: '100%', textAlign: 'left', fontFamily: 'inherit' }} onClick={() => { setActiveTab('dashboard'); setIsSidebarOpen(false); }}>
+              <span className="nav-icon">📊</span> Dashboard Meter
+            </button>
+          </li>
+          <li className="sidebar-item">
+            <button className={`sidebar-link ${activeTab === 'environmental' ? 'active' : ''}`} style={{ background: 'transparent', border: 'none', width: '100%', textAlign: 'left', fontFamily: 'inherit' }} onClick={() => { setActiveTab('environmental'); setIsSidebarOpen(false); }}>
+              <span className="nav-icon">🌱</span> Environmental
+            </button>
+          </li>
+          <li className="sidebar-item">
+            <button className={`sidebar-link ${activeTab === 'social' ? 'active' : ''}`} style={{ background: 'transparent', border: 'none', width: '100%', textAlign: 'left', fontFamily: 'inherit' }} onClick={() => { setActiveTab('social'); setIsSidebarOpen(false); }}>
+              <span className="nav-icon">🤝</span> Social Impact
+            </button>
+          </li>
+          <li className="sidebar-item">
+            <button className={`sidebar-link ${activeTab === 'governance' ? 'active' : ''}`} style={{ background: 'transparent', border: 'none', width: '100%', textAlign: 'left', fontFamily: 'inherit' }} onClick={() => { setActiveTab('governance'); setIsSidebarOpen(false); }}>
+              <span className="nav-icon">🛡️</span> Governance
+            </button>
+          </li>
+          <li className="sidebar-item">
+            <button className={`sidebar-link ${activeTab === 'gamification' ? 'active' : ''}`} style={{ background: 'transparent', border: 'none', width: '100%', textAlign: 'left', fontFamily: 'inherit' }} onClick={() => { setActiveTab('gamification'); setIsSidebarOpen(false); }}>
+              <span className="nav-icon">🏆</span> Gamification
+            </button>
+          </li>
+          <li className="sidebar-item">
+            <button className={`sidebar-link ${activeTab === 'reports' ? 'active' : ''}`} style={{ background: 'transparent', border: 'none', width: '100%', textAlign: 'left', fontFamily: 'inherit' }} onClick={() => { setActiveTab('reports'); setIsSidebarOpen(false); }}>
+              <span className="nav-icon">📖</span> Reports Builder
+            </button>
+          </li>
+          <li className="sidebar-item">
+            <button className={`sidebar-link ${activeTab === 'admin' ? 'active' : ''}`} style={{ background: 'transparent', border: 'none', width: '100%', textAlign: 'left', fontFamily: 'inherit' }} onClick={() => { setActiveTab('admin'); setIsSidebarOpen(false); }}>
+              <span className="nav-icon">⚙️</span> Administration
+            </button>
+          </li>
+        </ul>
 
-        <div style={{ marginTop: 'auto', padding: '16px', borderTop: '1px solid var(--border-color)', fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
+        <div className="sidebar-footer">
           <div>Client Engine Active</div>
           <div style={{ color: 'var(--primary)' }}>Node Express Proxy</div>
         </div>
       </aside>
 
       {/* Main Panel Content Area */}
-      <main className="main-content">
+      <main className="app-main">
         {/* Header toolbar */}
-        <header className="main-header">
+        <header className="app-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <button 
+              className="mobile-nav-toggle"
+              style={{
+                background: 'none',
+                border: 'none',
+                color: 'var(--text-primary)',
+                fontSize: '1.5rem',
+                cursor: 'pointer',
+                display: 'none',
+                padding: '4px',
+                lineHeight: 1
+              }}
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            >
+              ☰
+            </button>
             <span className="status-badge status-online">Proxy Live</span>
           </div>
 
@@ -142,26 +189,19 @@ export default function App() {
             )}
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <label style={{ fontSize: '0.65rem', color: 'var(--text-muted)', marginBottom: '2px' }}>Role Simulation Session</label>
-              <select 
-                style={{
-                  backgroundColor: 'var(--panel-bg)',
-                  color: 'var(--text-primary)',
-                  border: '1px solid var(--border-color)',
-                  padding: '6px 12px',
-                  borderRadius: '6px',
-                  fontSize: '0.8rem',
-                  outline: 'none',
-                  cursor: 'pointer'
-                }}
-                value={selectedEmpId}
-                onChange={(e) => handleUserChange(e.target.value)}
-              >
-                {employees.map(emp => (
-                  <option key={emp.id} value={emp.id}>
-                    {emp.name} ({emp.role})
-                  </option>
-                ))}
-              </select>
+              <div className="profile-selector-container">
+                <select 
+                  className="profile-select"
+                  value={selectedEmpId}
+                  onChange={(e) => handleUserChange(e.target.value)}
+                >
+                  {employees.map(emp => (
+                    <option key={emp.id} value={emp.id} style={{ backgroundColor: 'var(--bg-card)', color: 'var(--text-primary)' }}>
+                      {emp.name} ({emp.role})
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
         </header>

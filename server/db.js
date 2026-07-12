@@ -186,7 +186,8 @@ class Database {
       departments: departments.map(d => ({
         ...d,
         emissions: carbonLog.filter(c => c.departmentId === d.id).reduce((acc, log) => acc + (log.emissions || 0), 0)
-      }))
+      })),
+      erpLog: carbonLog
     };
   }
 

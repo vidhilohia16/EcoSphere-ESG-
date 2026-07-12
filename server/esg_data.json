@@ -10,27 +10,42 @@
     {
       "id": "dept-ops",
       "name": "Operations",
-      "employeeCount": 45
+      "employeeCount": 45,
+      "scoreEnvironmental": 80,
+      "scoreSocial": 73,
+      "scoreGovernance": 25
     },
     {
       "id": "dept-hr",
       "name": "Human Resources",
-      "employeeCount": 15
+      "employeeCount": 15,
+      "scoreEnvironmental": 95,
+      "scoreSocial": 73,
+      "scoreGovernance": 40
     },
     {
       "id": "dept-sales",
       "name": "Sales & Marketing",
-      "employeeCount": 30
+      "employeeCount": 30,
+      "scoreEnvironmental": 95,
+      "scoreSocial": 65,
+      "scoreGovernance": 25
     },
     {
       "id": "dept-rd",
       "name": "R&D",
-      "employeeCount": 20
+      "employeeCount": 20,
+      "scoreEnvironmental": 86,
+      "scoreSocial": 65,
+      "scoreGovernance": 100
     },
     {
       "id": "dept-fin",
       "name": "Finance & Admin",
-      "employeeCount": 10
+      "employeeCount": 10,
+      "scoreEnvironmental": 95,
+      "scoreSocial": 65,
+      "scoreGovernance": 100
     }
   ],
   "categories": [
@@ -156,7 +171,7 @@
       "id": "goal-emissions",
       "title": "Reduce Carbon Footprint by 20%",
       "targetValue": 50000,
-      "currentValue": 12000,
+      "currentValue": 3539.3,
       "unit": "kg CO2e",
       "module": "Environmental",
       "targetDate": "2026-12-31",
@@ -166,7 +181,7 @@
       "id": "goal-csr",
       "title": "500 CSR Volunteer Hours",
       "targetValue": 500,
-      "currentValue": 180,
+      "currentValue": 7,
       "unit": "hours",
       "module": "Social",
       "targetDate": "2026-12-31",
@@ -176,7 +191,7 @@
       "id": "goal-policy",
       "title": "100% Policy Acknowledgement",
       "targetValue": 100,
-      "currentValue": 80,
+      "currentValue": 40,
       "unit": "%",
       "module": "Governance",
       "targetDate": "2026-09-30",
@@ -311,7 +326,7 @@
       "name": "Sophia Chen",
       "role": "Staff",
       "departmentId": "dept-rd",
-      "xp": 350
+      "xp": 415
     },
     {
       "id": "emp-103",
@@ -332,7 +347,7 @@
       "name": "Liam Hughes",
       "role": "Staff",
       "departmentId": "dept-hr",
-      "xp": 90
+      "xp": 155
     }
   ],
   "erpLog": [
@@ -375,6 +390,26 @@
       "qty": 50,
       "emissions": 47.5,
       "notes": "Marketing pamphlets print order"
+    },
+    {
+      "id": "erp-mrhmj21o",
+      "departmentId": "dept-hr",
+      "date": "2026-07-12",
+      "categoryId": "cat-fleet",
+      "emissionFactorId": "ef-diesel",
+      "qty": 5,
+      "emissions": 13.4,
+      "notes": "Operational log for Fleet Fuel (Diesel)"
+    },
+    {
+      "id": "erp-mrhmjhlp",
+      "departmentId": "dept-rd",
+      "date": "2026-07-12",
+      "categoryId": "cat-fleet",
+      "emissionFactorId": "ef-diesel",
+      "qty": 5,
+      "emissions": 13.4,
+      "notes": "Operational log for Fleet Fuel (Diesel)"
     }
   ],
   "csrActivities": [
@@ -514,6 +549,16 @@
       "employeeId": "emp-102",
       "badgeId": "badge-xp-milestone",
       "date": "2026-07-10"
+    },
+    {
+      "employeeId": "emp-105",
+      "badgeId": "badge-carbon-starter",
+      "date": "2026-07-12"
+    },
+    {
+      "employeeId": "emp-102",
+      "badgeId": "badge-carbon-starter",
+      "date": "2026-07-12"
     }
   ],
   "redemptions": [
@@ -541,6 +586,22 @@
       "message": "Congratulations! You unlocked the Eco Starter badge.",
       "date": "2026-07-02",
       "unread": false
+    },
+    {
+      "id": "notif-mrhmj21p",
+      "employeeId": "emp-105",
+      "type": "badge",
+      "message": "Badge Unlocked: Eco Starter! Earned +50 XP.",
+      "date": "2026-07-12",
+      "unread": true
+    },
+    {
+      "id": "notif-mrhmjhlp",
+      "employeeId": "emp-102",
+      "type": "badge",
+      "message": "Badge Unlocked: Eco Starter! Earned +50 XP.",
+      "date": "2026-07-12",
+      "unread": true
     }
   ]
 }
