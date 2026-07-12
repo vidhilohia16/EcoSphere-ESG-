@@ -409,11 +409,16 @@ export default function Social({ data, refreshData, currentUser }) {
             </div>
 
             <div className="form-group">
-              <label>Verification Evidence File URL / Reference (Required if Policy Configured)</label>
+              <label style={{ display: 'flex', flexDirection: 'column' }}>
+                <span style={{ fontWeight: 600 }}>Verification Evidence File URL / Reference</span>
+                <span style={{ fontSize: '0.7rem', color: 'var(--danger)', marginTop: '4px', fontWeight: 'bold' }}>
+                  ⚠️ Verification is necessary for compliance approval.
+                </span>
+              </label>
               <input 
                 type="text" 
                 className="form-input" 
-                placeholder="e.g. cert_volunteer_drive.pdf" 
+                placeholder="e.g. cert_volunteer_drive.pdf (necessary for approval)" 
                 value={evidence}
                 onChange={(e) => setEvidence(e.target.value)}
               />
