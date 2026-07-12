@@ -1,0 +1,546 @@
+{
+  "config": {
+    "weightEnvironmental": 40,
+    "weightSocial": 30,
+    "weightGovernance": 30,
+    "carbonAccountingEnabled": true,
+    "csrRequireEvidence": true
+  },
+  "departments": [
+    {
+      "id": "dept-ops",
+      "name": "Operations",
+      "employeeCount": 45
+    },
+    {
+      "id": "dept-hr",
+      "name": "Human Resources",
+      "employeeCount": 15
+    },
+    {
+      "id": "dept-sales",
+      "name": "Sales & Marketing",
+      "employeeCount": 30
+    },
+    {
+      "id": "dept-rd",
+      "name": "R&D",
+      "employeeCount": 20
+    },
+    {
+      "id": "dept-fin",
+      "name": "Finance & Admin",
+      "employeeCount": 10
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-fleet",
+      "name": "Fleet Travel",
+      "module": "Environmental"
+    },
+    {
+      "id": "cat-manufacturing",
+      "name": "Manufacturing Operations",
+      "module": "Environmental"
+    },
+    {
+      "id": "cat-purchases",
+      "name": "Procured Materials",
+      "module": "Environmental"
+    },
+    {
+      "id": "cat-expenses",
+      "name": "Facility Expenses & Utilities",
+      "module": "Environmental"
+    },
+    {
+      "id": "cat-csr",
+      "name": "CSR Volunteer Activities",
+      "module": "Social"
+    },
+    {
+      "id": "cat-training",
+      "name": "Skill & Compliance Training",
+      "module": "Social"
+    },
+    {
+      "id": "cat-governance",
+      "name": "Policy & Audit Actions",
+      "module": "Governance"
+    }
+  ],
+  "emissionFactors": [
+    {
+      "id": "ef-diesel",
+      "categoryId": "cat-fleet",
+      "name": "Fleet Fuel (Diesel)",
+      "factor": 2.68,
+      "unit": "liters",
+      "co2Unit": "kg CO2e"
+    },
+    {
+      "id": "ef-petrol",
+      "categoryId": "cat-fleet",
+      "name": "Fleet Fuel (Petrol)",
+      "factor": 2.31,
+      "unit": "liters",
+      "co2Unit": "kg CO2e"
+    },
+    {
+      "id": "ef-electricity-grid",
+      "categoryId": "cat-expenses",
+      "name": "Grid Electricity",
+      "factor": 0.85,
+      "unit": "kWh",
+      "co2Unit": "kg CO2e"
+    },
+    {
+      "id": "ef-natural-gas",
+      "categoryId": "cat-expenses",
+      "name": "Natural Gas",
+      "factor": 1.88,
+      "unit": "m3",
+      "co2Unit": "kg CO2e"
+    },
+    {
+      "id": "ef-steel",
+      "categoryId": "cat-manufacturing",
+      "name": "Raw Material (Steel)",
+      "factor": 1.9,
+      "unit": "kg",
+      "co2Unit": "kg CO2e"
+    },
+    {
+      "id": "ef-aluminum",
+      "categoryId": "cat-manufacturing",
+      "name": "Raw Material (Aluminum)",
+      "factor": 11.5,
+      "unit": "kg",
+      "co2Unit": "kg CO2e"
+    },
+    {
+      "id": "ef-paper",
+      "categoryId": "cat-purchases",
+      "name": "Office Supplies (Paper)",
+      "factor": 0.95,
+      "unit": "kg",
+      "co2Unit": "kg CO2e"
+    }
+  ],
+  "productProfiles": [
+    {
+      "id": "prod-ecoBox",
+      "name": "Eco-Friendly Pack Box",
+      "carbonFootprint": 1.25,
+      "recyclability": 95,
+      "materialSourcing": "100% Recycled content"
+    },
+    {
+      "id": "prod-stdBox",
+      "name": "Standard Kraft Box",
+      "carbonFootprint": 2.4,
+      "recyclability": 70,
+      "materialSourcing": "Mixed forests"
+    },
+    {
+      "id": "prod-heavyDuty",
+      "name": "Heavy Duty Case",
+      "carbonFootprint": 5.8,
+      "recyclability": 50,
+      "materialSourcing": "Virgin pulp"
+    }
+  ],
+  "esgGoals": [
+    {
+      "id": "goal-emissions",
+      "title": "Reduce Carbon Footprint by 20%",
+      "targetValue": 50000,
+      "currentValue": 12000,
+      "unit": "kg CO2e",
+      "module": "Environmental",
+      "targetDate": "2026-12-31",
+      "status": "In Progress"
+    },
+    {
+      "id": "goal-csr",
+      "title": "500 CSR Volunteer Hours",
+      "targetValue": 500,
+      "currentValue": 180,
+      "unit": "hours",
+      "module": "Social",
+      "targetDate": "2026-12-31",
+      "status": "In Progress"
+    },
+    {
+      "id": "goal-policy",
+      "title": "100% Policy Acknowledgement",
+      "targetValue": 100,
+      "currentValue": 80,
+      "unit": "%",
+      "module": "Governance",
+      "targetDate": "2026-09-30",
+      "status": "In Progress"
+    }
+  ],
+  "policies": [
+    {
+      "id": "pol-conduct",
+      "title": "Code of Business Conduct and Ethics",
+      "version": "v2.1",
+      "lastUpdated": "2026-01-10",
+      "requiredRoles": [
+        "All"
+      ]
+    },
+    {
+      "id": "pol-env",
+      "title": "Environmental Sustainability & Carbon Offset Policy",
+      "version": "v1.4",
+      "lastUpdated": "2026-03-15",
+      "requiredRoles": [
+        "All"
+      ]
+    },
+    {
+      "id": "pol-whistleblower",
+      "title": "Whistleblower and Anti-Corruption Policy",
+      "version": "v3.0",
+      "lastUpdated": "2025-11-05",
+      "requiredRoles": [
+        "All"
+      ]
+    }
+  ],
+  "badges": [
+    {
+      "id": "badge-carbon-starter",
+      "name": "Eco Starter",
+      "description": "Log your first carbon tracking transaction",
+      "icon": "🌱",
+      "xpAward": 50,
+      "ruleType": "first_carbon_log"
+    },
+    {
+      "id": "badge-csr-champion",
+      "name": "CSR Champion",
+      "description": "Participate in 3 or more CSR volunteer activities",
+      "icon": "🤝",
+      "xpAward": 100,
+      "ruleType": "csr_count_3"
+    },
+    {
+      "id": "badge-policy-guardian",
+      "name": "Policy Guardian",
+      "description": "Acknowledge all compliance policies",
+      "icon": "🛡️",
+      "xpAward": 100,
+      "ruleType": "all_policies"
+    },
+    {
+      "id": "badge-xp-milestone",
+      "name": "Sustainability Veteran",
+      "description": "Earn 300 or more total XP",
+      "icon": "🏆",
+      "xpAward": 200,
+      "ruleType": "xp_milestone_300"
+    }
+  ],
+  "rewards": [
+    {
+      "id": "rew-cup",
+      "name": "Eco Ceramic Coffee Mug",
+      "cost": 100,
+      "inventoryCount": 20,
+      "description": "Reusable bamboo-blend ceramic mug"
+    },
+    {
+      "id": "rew-tree",
+      "name": "Plant a Native Tree",
+      "cost": 200,
+      "inventoryCount": 999,
+      "description": "We will plant a tree in your name with carbon verification"
+    },
+    {
+      "id": "rew-gift",
+      "name": "$20 Sustainability Store Voucher",
+      "cost": 300,
+      "inventoryCount": 5,
+      "description": "Voucher redeemable at verified ethical stores"
+    }
+  ],
+  "challenges": [
+    {
+      "id": "chal-carpool",
+      "title": "Carpool Week",
+      "rewardXp": 40,
+      "participantCount": 12,
+      "target": "Commute with coworker 3 times",
+      "status": "Active",
+      "module": "Environmental"
+    },
+    {
+      "id": "chal-cleanup",
+      "title": "Local Park Clean-up",
+      "rewardXp": 80,
+      "participantCount": 8,
+      "target": "Represent the company at the park clean-up",
+      "status": "Active",
+      "module": "Social"
+    },
+    {
+      "id": "chal-audit",
+      "title": "Office Audit Day",
+      "rewardXp": 50,
+      "participantCount": 3,
+      "target": "Ensure waste segregation in your department",
+      "status": "Active",
+      "module": "Governance"
+    }
+  ],
+  "employees": [
+    {
+      "id": "emp-101",
+      "name": "Alex Rivera",
+      "role": "Staff",
+      "departmentId": "dept-ops",
+      "xp": 220
+    },
+    {
+      "id": "emp-102",
+      "name": "Sophia Chen",
+      "role": "Staff",
+      "departmentId": "dept-rd",
+      "xp": 350
+    },
+    {
+      "id": "emp-103",
+      "name": "Marcus Vance",
+      "role": "Manager",
+      "departmentId": "dept-sales",
+      "xp": 180
+    },
+    {
+      "id": "emp-104",
+      "name": "Elena Rostova",
+      "role": "Compliance Officer",
+      "departmentId": "dept-fin",
+      "xp": 290
+    },
+    {
+      "id": "emp-105",
+      "name": "Liam Hughes",
+      "role": "Staff",
+      "departmentId": "dept-hr",
+      "xp": 90
+    }
+  ],
+  "erpLog": [
+    {
+      "id": "erp-01",
+      "departmentId": "dept-ops",
+      "date": "2026-07-01",
+      "categoryId": "cat-fleet",
+      "emissionFactorId": "ef-diesel",
+      "qty": 250,
+      "emissions": 670,
+      "notes": "Fleet truck delivery fuel"
+    },
+    {
+      "id": "erp-02",
+      "departmentId": "dept-rd",
+      "date": "2026-07-02",
+      "categoryId": "cat-expenses",
+      "emissionFactorId": "ef-electricity-grid",
+      "qty": 1500,
+      "emissions": 1275,
+      "notes": "R&D Lab heating & cooling"
+    },
+    {
+      "id": "erp-03",
+      "departmentId": "dept-ops",
+      "date": "2026-07-04",
+      "categoryId": "cat-manufacturing",
+      "emissionFactorId": "ef-steel",
+      "qty": 800,
+      "emissions": 1520,
+      "notes": "Batch-12 production steel casing"
+    },
+    {
+      "id": "erp-04",
+      "departmentId": "dept-sales",
+      "date": "2026-07-05",
+      "categoryId": "cat-purchases",
+      "emissionFactorId": "ef-paper",
+      "qty": 50,
+      "emissions": 47.5,
+      "notes": "Marketing pamphlets print order"
+    }
+  ],
+  "csrActivities": [
+    {
+      "id": "csr-01",
+      "title": "Community Green Planting Day",
+      "departmentId": "dept-ops",
+      "employeeId": "emp-101",
+      "date": "2026-07-03",
+      "hours": 4,
+      "status": "Approved",
+      "evidence": "community_greenhouse_photo.jpg"
+    },
+    {
+      "id": "csr-02",
+      "title": "Homeless Shelter Meal Service",
+      "departmentId": "dept-hr",
+      "employeeId": "emp-105",
+      "date": "2026-07-08",
+      "hours": 3,
+      "status": "Approved",
+      "evidence": "volunteer_badge.jpg"
+    },
+    {
+      "id": "csr-03",
+      "title": "Coastal Cleanup Drive",
+      "departmentId": "dept-rd",
+      "employeeId": "emp-102",
+      "date": "2026-07-10",
+      "hours": 5,
+      "status": "Pending Approval",
+      "evidence": null
+    }
+  ],
+  "policyAcknowledgements": [
+    {
+      "employeeId": "emp-101",
+      "policyId": "pol-conduct",
+      "acknowledged": true,
+      "date": "2026-01-15"
+    },
+    {
+      "employeeId": "emp-101",
+      "policyId": "pol-env",
+      "acknowledged": true,
+      "date": "2026-03-20"
+    },
+    {
+      "employeeId": "emp-102",
+      "policyId": "pol-conduct",
+      "acknowledged": true,
+      "date": "2026-02-10"
+    },
+    {
+      "employeeId": "emp-102",
+      "policyId": "pol-env",
+      "acknowledged": true,
+      "date": "2026-03-18"
+    },
+    {
+      "employeeId": "emp-102",
+      "policyId": "pol-whistleblower",
+      "acknowledged": true,
+      "date": "2026-01-05"
+    },
+    {
+      "employeeId": "emp-103",
+      "policyId": "pol-conduct",
+      "acknowledged": true,
+      "date": "2026-02-01"
+    },
+    {
+      "employeeId": "emp-104",
+      "policyId": "pol-conduct",
+      "acknowledged": true,
+      "date": "2026-01-12"
+    },
+    {
+      "employeeId": "emp-104",
+      "policyId": "pol-env",
+      "acknowledged": true,
+      "date": "2026-03-16"
+    },
+    {
+      "employeeId": "emp-104",
+      "policyId": "pol-whistleblower",
+      "acknowledged": true,
+      "date": "2026-01-12"
+    }
+  ],
+  "complianceIssues": [
+    {
+      "id": "comp-01",
+      "title": "Missing Material Supplier Certifications",
+      "departmentId": "dept-ops",
+      "severity": "High",
+      "dateLogged": "2026-06-20",
+      "status": "Open",
+      "description": "Ops lacks green sourcing proof for steel raw material receipts."
+    },
+    {
+      "id": "comp-02",
+      "title": "Overdue Whistleblower Policy Reminders",
+      "departmentId": "dept-sales",
+      "severity": "Medium",
+      "dateLogged": "2026-07-02",
+      "status": "Open",
+      "description": "Over 40% of sales staff have overdue handbook policy logs."
+    },
+    {
+      "id": "comp-03",
+      "title": "Incomplete Safety Equipment Induction Log",
+      "departmentId": "dept-rd",
+      "severity": "Low",
+      "dateLogged": "2026-05-14",
+      "status": "Resolved",
+      "description": "Induction training sheets not uploaded for temp contractors."
+    }
+  ],
+  "badgeUnlocks": [
+    {
+      "employeeId": "emp-101",
+      "badgeId": "badge-carbon-starter",
+      "date": "2026-07-02"
+    },
+    {
+      "employeeId": "emp-104",
+      "badgeId": "badge-policy-guardian",
+      "date": "2026-03-16"
+    },
+    {
+      "employeeId": "emp-102",
+      "badgeId": "badge-policy-guardian",
+      "date": "2026-03-18"
+    },
+    {
+      "employeeId": "emp-102",
+      "badgeId": "badge-xp-milestone",
+      "date": "2026-07-10"
+    }
+  ],
+  "redemptions": [
+    {
+      "id": "red-01",
+      "employeeId": "emp-101",
+      "rewardId": "rew-cup",
+      "date": "2026-07-06",
+      "cost": 100
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-01",
+      "employeeId": "emp-104",
+      "type": "compliance",
+      "message": "Urgent compliance audit review scheduled for operations.",
+      "date": "2026-07-11",
+      "unread": true
+    },
+    {
+      "id": "notif-02",
+      "employeeId": "emp-101",
+      "type": "badge",
+      "message": "Congratulations! You unlocked the Eco Starter badge.",
+      "date": "2026-07-02",
+      "unread": false
+    }
+  ]
+}
