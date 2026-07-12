@@ -36,7 +36,7 @@
       "name": "R&D",
       "employeeCount": 20,
       "scoreEnvironmental": 86,
-      "scoreSocial": 65,
+      "scoreSocial": 73,
       "scoreGovernance": 100
     },
     {
@@ -181,7 +181,7 @@
       "id": "goal-csr",
       "title": "500 CSR Volunteer Hours",
       "targetValue": 500,
-      "currentValue": 7,
+      "currentValue": 12,
       "unit": "hours",
       "module": "Social",
       "targetDate": "2026-12-31",
@@ -326,7 +326,7 @@
       "name": "Sophia Chen",
       "role": "Staff",
       "departmentId": "dept-rd",
-      "xp": 415
+      "xp": 465
     },
     {
       "id": "emp-103",
@@ -440,8 +440,8 @@
       "employeeId": "emp-102",
       "date": "2026-07-10",
       "hours": 5,
-      "status": "Pending Approval",
-      "evidence": null
+      "status": "Approved",
+      "evidence": "photo.jpg"
     }
   ],
   "policyAcknowledgements": [
@@ -600,6 +600,14 @@
       "employeeId": "emp-102",
       "type": "badge",
       "message": "Badge Unlocked: Eco Starter! Earned +50 XP.",
+      "date": "2026-07-12",
+      "unread": true
+    },
+    {
+      "id": "notif-mrhpd733",
+      "employeeId": "emp-102",
+      "type": "approval",
+      "message": "Your CSR Volunteer Hours for 'Coastal Cleanup Drive' have been approved!",
       "date": "2026-07-12",
       "unread": true
     }

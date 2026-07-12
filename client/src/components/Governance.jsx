@@ -103,7 +103,7 @@ export default function Governance({ data, refreshData, currentUser }) {
                 );
 
                 return (
-                  <div key={policy.id} style={{ display: 'flex', justifySelf: 'stretch', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'rgba(24, 34, 58, 0.4)', padding: '20px', borderRadius: '8px', border: '1px solid var(--border-color)', transition: 'var(--transition-fast)' }}>
+                  <div key={policy.id} style={{ display: 'flex', justifySelf: 'stretch', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'rgba(255, 255, 255, 0.45)', padding: '20px', borderRadius: '8px', border: '1px solid var(--border-color)', transition: 'var(--transition-fast)' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)' }}>{policy.title}</h4>
                       <div style={{ display: 'flex', gap: '12px', fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
@@ -197,7 +197,7 @@ export default function Governance({ data, refreshData, currentUser }) {
                 const isOverdue = issue.severity === 'High' || issue.severity === 'Medium';
                 
                 return (
-                  <div key={issue.id} style={{ display: 'flex', flexDirection: 'column', gap: '8px', backgroundColor: 'rgba(24, 34, 58, 0.4)', padding: '16px', borderRadius: '8px', border: '1px solid var(--border-color)', borderLeft: isOverdue ? '4px solid var(--danger)' : '1px solid var(--border-color)' }}>
+                  <div key={issue.id} style={{ display: 'flex', flexDirection: 'column', gap: '8px', backgroundColor: 'rgba(255, 255, 255, 0.45)', padding: '16px', borderRadius: '8px', border: '1px solid var(--border-color)', borderLeft: isOverdue ? '4px solid var(--danger)' : '1px solid var(--border-color)' }}>
                     <div style={{ display: 'flex', justifySelf: 'stretch', justifyContent: 'space-between', alignItems: 'center' }}>
                       <span style={{ fontWeight: 650, fontSize: '0.9rem' }}>{issue.title}</span>
                       <span style={{ fontSize: '0.7rem', padding: '3px 8px', borderRadius: '4px', backgroundColor: issue.severity === 'High' ? 'rgba(239, 68, 68, 0.15)' : 'rgba(250, 204, 21, 0.15)', color: issue.severity === 'High' ? 'var(--danger)' : 'var(--accent-gold)' }}>
@@ -230,7 +230,7 @@ export default function Governance({ data, refreshData, currentUser }) {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {finishedIssues.map(issue => (
-                <div key={issue.id} style={{ opacity: 0.6, fontSize: '0.8rem', backgroundColor: 'rgba(24, 34, 58, 0.2)', padding: '10px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                <div key={issue.id} style={{ opacity: 0.6, fontSize: '0.8rem', backgroundColor: 'rgba(255, 255, 255, 0.25)', padding: '10px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                   <div style={{ display: 'flex', justifySelf: 'stretch', justifyContent: 'space-between' }}>
                     <span style={{ textDecoration: 'line-through' }}>{issue.title}</span>
                     <span style={{ color: 'var(--primary)' }}>Resolved</span>

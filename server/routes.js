@@ -85,6 +85,18 @@ router.post('/csr/approve', (req, res) => {
   }
 });
 
+// Reject CSR Activity
+router.post('/csr/reject', (req, res) => {
+  const { id } = req.body;
+  try {
+    if (!id) return res.status(400).json({ error: "Missing activity ID" });
+    const rejectedAct = db.rejectCSRActivity(id);
+    res.json({ success: true, activity: rejectedAct });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
 // Acknowledge Compliance Policy
 router.post('/policy/acknowledge', (req, res) => {
   const { employeeId, policyId } = req.body;

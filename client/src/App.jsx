@@ -229,7 +229,7 @@ export default function App() {
 
         {/* Dynamic Route Pages */}
         {activeTab === 'dashboard' && dashboardData && (
-          <Dashboard data={dashboardData} refreshData={refreshAppState} />
+          <Dashboard data={dashboardData} refreshData={refreshAppState} setActiveTab={setActiveTab} />
         )}
         {activeTab === 'environmental' && dashboardData && (
           <Environmental data={dashboardData} refreshData={refreshAppState} />

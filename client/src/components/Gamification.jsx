@@ -168,7 +168,7 @@ export default function Gamification({ data, refreshData, currentUser }) {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {challenges.map(chal => (
-                <div key={chal.id} style={{ display: 'flex', justifySelf: 'stretch', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'rgba(24, 34, 58, 0.4)', padding: '12px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                <div key={chal.id} style={{ display: 'flex', justifySelf: 'stretch', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'rgba(255, 255, 255, 0.45)', padding: '12px 14px', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
                     <span style={{ fontWeight: 650, fontSize: '0.85rem' }}>{chal.title}</span>
                     <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>Target: {chal.target}</span>
@@ -199,7 +199,7 @@ export default function Gamification({ data, refreshData, currentUser }) {
                 return (
                   <div key={emp.id} className="ranking-item" style={{ 
                     border: isSelf ? '1.5px solid var(--accent-gold)' : '1px solid var(--border-color)',
-                    backgroundColor: isSelf ? 'rgba(250, 204, 21, 0.05)' : 'rgba(16, 25, 48, 0.4)'
+                    backgroundColor: isSelf ? 'rgba(250, 204, 21, 0.05)' : 'rgba(255, 255, 255, 0.45)'
                   }}>
                     <div className={badgeClass}>{rank}</div>
                     <div className="ranking-details">

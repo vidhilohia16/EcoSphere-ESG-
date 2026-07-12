@@ -423,6 +423,23 @@ class Database {
     return act;
   }
 
+  rejectCSRActivity(id) {
+    const act = this.data.csrActivities.find(c => c.id === id);
+    if (!act) throw new Error("CSR activity not found");
+    
+    if (act.status === 'Approved') {
+      const emp = this.data.employees.find(e => e.id === act.employeeId);
+      if (emp) {
+        emp.xp = Math.max(0, emp.xp - act.hours * 10);
+      }
+    }
+    
+    act.status = 'Rejected';
+    this.syncDynamicScores();
+    this.save();
+    return act;
+  }
+
   // --- Policy Acknowledgements ---
 
   acknowledgePolicy(employeeId, policyId) {
