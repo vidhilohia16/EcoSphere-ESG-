@@ -344,8 +344,8 @@ export default function Admin({ data, refreshData, currentUser }) {
                       <td style={{ fontWeight: 600 }}>{dept.name}</td>
                       <td>{dept.employeeCount} emps</td>
                       <td>
-                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '6px' }} onClick={() => handleEditInit(dept, setDeptForm)} disabled={!isComplianceOfficer}>Edit</button>
-                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('departments', dept.id)} disabled={!isComplianceOfficer || dept.id.startsWith('dept-')}>Delete</button>
+                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '6px' }} onClick={() => handleEditInit(dept, setDeptForm)}>Edit</button>
+                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('departments', dept.id)}>Delete</button>
                       </td>
                     </tr>
                   ))}
@@ -443,8 +443,8 @@ export default function Admin({ data, refreshData, currentUser }) {
                         <td>{cat ? cat.name.split(' ')[0] : 'Environmental'}</td>
                         <td>{fac.factor} kg / {fac.unit}</td>
                         <td>
-                          <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(fac, setFactorForm)} disabled={!isComplianceOfficer}>Edit</button>
-                          <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('emissionFactors', fac.id)} disabled={!isComplianceOfficer || fac.id.startsWith('ef-')}>Delete</button>
+                          <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(fac, setFactorForm)}>Edit</button>
+                          <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('emissionFactors', fac.id)}>Delete</button>
                         </td>
                       </tr>
                     );
@@ -534,8 +534,8 @@ export default function Admin({ data, refreshData, currentUser }) {
                       <td>{prod.carbonFootprint} kg</td>
                       <td>{prod.recyclability}%</td>
                       <td>
-                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(prod, setProductForm)} disabled={!isComplianceOfficer}>Edit</button>
-                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('productProfiles', prod.id)} disabled={!isComplianceOfficer}>Delete</button>
+                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(prod, setProductForm)}>Edit</button>
+                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('productProfiles', prod.id)}>Delete</button>
                       </td>
                     </tr>
                   ))}
@@ -639,8 +639,8 @@ export default function Admin({ data, refreshData, currentUser }) {
                       <td>{gl.module}</td>
                       <td>{gl.targetValue.toLocaleString()} {gl.unit}</td>
                       <td>
-                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(gl, setGoalForm)} disabled={!isComplianceOfficer}>Edit</button>
-                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('esgGoals', gl.id)} disabled={!isComplianceOfficer || gl.id.startsWith('goal-')}>Delete</button>
+                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(gl, setGoalForm)}>Edit</button>
+                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('esgGoals', gl.id)}>Delete</button>
                       </td>
                     </tr>
                   ))}
@@ -716,8 +716,8 @@ export default function Admin({ data, refreshData, currentUser }) {
                       <td style={{ fontWeight: 600 }}>{pol.title}</td>
                       <td>{pol.version}</td>
                       <td>
-                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(pol, setPolicyForm)} disabled={!isComplianceOfficer}>Edit</button>
-                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('policies', pol.id)} disabled={!isComplianceOfficer || pol.id.startsWith('pol-')}>Delete</button>
+                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(pol, setPolicyForm)}>Edit</button>
+                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('policies', pol.id)}>Delete</button>
                       </td>
                     </tr>
                   ))}
@@ -805,8 +805,8 @@ export default function Admin({ data, refreshData, currentUser }) {
                       <td>{rew.cost} XP</td>
                       <td>{rew.inventoryCount} left</td>
                       <td>
-                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(rew, setRewardForm)} disabled={!isComplianceOfficer}>Edit</button>
-                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('rewards', rew.id)} disabled={!isComplianceOfficer || rew.id.startsWith('rew-')}>Delete</button>
+                        <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '0.75rem', marginRight: '4px' }} onClick={() => handleEditInit(rew, setRewardForm)}>Edit</button>
+                        <button className="btn btn-danger" style={{ padding: '4px 8px', fontSize: '0.75rem' }} onClick={() => handleDeleteEntity('rewards', rew.id)}>Delete</button>
                       </td>
                     </tr>
                   ))}

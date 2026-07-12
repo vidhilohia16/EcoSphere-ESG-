@@ -37,11 +37,19 @@
       "employeeCount": 20,
       "scoreEnvironmental": 86,
       "scoreSocial": 73,
-      "scoreGovernance": 100
+      "scoreGovernance": 40
     },
     {
       "id": "dept-fin",
       "name": "Finance & Admin",
+      "employeeCount": 10,
+      "scoreEnvironmental": 95,
+      "scoreSocial": 65,
+      "scoreGovernance": 40
+    },
+    {
+      "id": "",
+      "name": "RD",
       "employeeCount": 10,
       "scoreEnvironmental": 95,
       "scoreSocial": 65,
@@ -90,7 +98,7 @@
       "id": "ef-diesel",
       "categoryId": "cat-fleet",
       "name": "Fleet Fuel (Diesel)",
-      "factor": 2.68,
+      "factor": 2.9,
       "unit": "liters",
       "co2Unit": "kg CO2e"
     },
@@ -191,7 +199,7 @@
       "id": "goal-policy",
       "title": "100% Policy Acknowledgement",
       "targetValue": 100,
-      "currentValue": 40,
+      "currentValue": 0,
       "unit": "%",
       "module": "Governance",
       "targetDate": "2026-09-30",
@@ -225,6 +233,13 @@
       "requiredRoles": [
         "All"
       ]
+    },
+    {
+      "id": "",
+      "title": "New Policy",
+      "version": "v1.0",
+      "lastUpdated": "2026-07-21",
+      "requiredRoles": "All"
     }
   ],
   "badges": [
@@ -266,14 +281,14 @@
       "id": "rew-cup",
       "name": "Eco Ceramic Coffee Mug",
       "cost": 100,
-      "inventoryCount": 20,
+      "inventoryCount": 19,
       "description": "Reusable bamboo-blend ceramic mug"
     },
     {
       "id": "rew-tree",
       "name": "Plant a Native Tree",
       "cost": 200,
-      "inventoryCount": 999,
+      "inventoryCount": 998,
       "description": "We will plant a tree in your name with carbon verification"
     },
     {
@@ -319,7 +334,7 @@
       "name": "Alex Rivera",
       "role": "Staff",
       "departmentId": "dept-ops",
-      "xp": 220
+      "xp": 120
     },
     {
       "id": "emp-102",
@@ -340,7 +355,7 @@
       "name": "Elena Rostova",
       "role": "Compliance Officer",
       "departmentId": "dept-fin",
-      "xp": 290
+      "xp": 90
     },
     {
       "id": "emp-105",
@@ -568,6 +583,20 @@
       "rewardId": "rew-cup",
       "date": "2026-07-06",
       "cost": 100
+    },
+    {
+      "id": "red-mrhpu81f",
+      "employeeId": "emp-101",
+      "rewardId": "rew-cup",
+      "date": "2026-07-12",
+      "cost": 100
+    },
+    {
+      "id": "red-mrhpyism",
+      "employeeId": "emp-104",
+      "rewardId": "rew-tree",
+      "date": "2026-07-12",
+      "cost": 200
     }
   ],
   "notifications": [
@@ -608,6 +637,22 @@
       "employeeId": "emp-102",
       "type": "approval",
       "message": "Your CSR Volunteer Hours for 'Coastal Cleanup Drive' have been approved!",
+      "date": "2026-07-12",
+      "unread": true
+    },
+    {
+      "id": "notif-mrhpu81f",
+      "employeeId": "emp-101",
+      "type": "approval",
+      "message": "Successfully redeemed reward: Eco Ceramic Coffee Mug for 100 XP! Check your email.",
+      "date": "2026-07-12",
+      "unread": true
+    },
+    {
+      "id": "notif-mrhpyism",
+      "employeeId": "emp-104",
+      "type": "approval",
+      "message": "Successfully redeemed reward: Plant a Native Tree for 200 XP! Check your email.",
       "date": "2026-07-12",
       "unread": true
     }

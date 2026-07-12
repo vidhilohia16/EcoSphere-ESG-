@@ -21,6 +21,10 @@ export default function App() {
     fetchEmployees();
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeTab]);
+
   const fetchDashboard = async () => {
     try {
       const res = await fetch('/api/dashboard');
