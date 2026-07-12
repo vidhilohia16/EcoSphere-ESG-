@@ -10,50 +10,27 @@
     {
       "id": "dept-ops",
       "name": "Operations",
-      "employeeCount": 45,
-      "scoreEnvironmental": 80,
-      "scoreSocial": 73,
-      "scoreGovernance": 25
+      "employeeCount": 45
     },
     {
       "id": "dept-hr",
       "name": "Human Resources",
-      "employeeCount": 15,
-      "scoreEnvironmental": 95,
-      "scoreSocial": 73,
-      "scoreGovernance": 40
+      "employeeCount": 15
     },
     {
       "id": "dept-sales",
       "name": "Sales & Marketing",
-      "employeeCount": 30,
-      "scoreEnvironmental": 95,
-      "scoreSocial": 65,
-      "scoreGovernance": 25
+      "employeeCount": 30
     },
     {
       "id": "dept-rd",
       "name": "R&D",
-      "employeeCount": 20,
-      "scoreEnvironmental": 86,
-      "scoreSocial": 73,
-      "scoreGovernance": 40
+      "employeeCount": 20
     },
     {
       "id": "dept-fin",
       "name": "Finance & Admin",
-      "employeeCount": 10,
-      "scoreEnvironmental": 95,
-      "scoreSocial": 65,
-      "scoreGovernance": 40
-    },
-    {
-      "id": "",
-      "name": "RD",
-      "employeeCount": 10,
-      "scoreEnvironmental": 95,
-      "scoreSocial": 65,
-      "scoreGovernance": 100
+      "employeeCount": 10
     }
   ],
   "categories": [
@@ -98,7 +75,7 @@
       "id": "ef-diesel",
       "categoryId": "cat-fleet",
       "name": "Fleet Fuel (Diesel)",
-      "factor": 2.9,
+      "factor": 2.68,
       "unit": "liters",
       "co2Unit": "kg CO2e"
     },
@@ -179,7 +156,7 @@
       "id": "goal-emissions",
       "title": "Reduce Carbon Footprint by 20%",
       "targetValue": 50000,
-      "currentValue": 3539.3,
+      "currentValue": 12000,
       "unit": "kg CO2e",
       "module": "Environmental",
       "targetDate": "2026-12-31",
@@ -189,7 +166,7 @@
       "id": "goal-csr",
       "title": "500 CSR Volunteer Hours",
       "targetValue": 500,
-      "currentValue": 12,
+      "currentValue": 180,
       "unit": "hours",
       "module": "Social",
       "targetDate": "2026-12-31",
@@ -199,7 +176,7 @@
       "id": "goal-policy",
       "title": "100% Policy Acknowledgement",
       "targetValue": 100,
-      "currentValue": 0,
+      "currentValue": 80,
       "unit": "%",
       "module": "Governance",
       "targetDate": "2026-09-30",
@@ -233,13 +210,6 @@
       "requiredRoles": [
         "All"
       ]
-    },
-    {
-      "id": "",
-      "title": "New Policy",
-      "version": "v1.0",
-      "lastUpdated": "2026-07-21",
-      "requiredRoles": "All"
     }
   ],
   "badges": [
@@ -281,14 +251,14 @@
       "id": "rew-cup",
       "name": "Eco Ceramic Coffee Mug",
       "cost": 100,
-      "inventoryCount": 19,
+      "inventoryCount": 20,
       "description": "Reusable bamboo-blend ceramic mug"
     },
     {
       "id": "rew-tree",
       "name": "Plant a Native Tree",
       "cost": 200,
-      "inventoryCount": 998,
+      "inventoryCount": 999,
       "description": "We will plant a tree in your name with carbon verification"
     },
     {
@@ -334,14 +304,14 @@
       "name": "Alex Rivera",
       "role": "Staff",
       "departmentId": "dept-ops",
-      "xp": 120
+      "xp": 220
     },
     {
       "id": "emp-102",
       "name": "Sophia Chen",
       "role": "Staff",
       "departmentId": "dept-rd",
-      "xp": 465
+      "xp": 350
     },
     {
       "id": "emp-103",
@@ -355,14 +325,14 @@
       "name": "Elena Rostova",
       "role": "Compliance Officer",
       "departmentId": "dept-fin",
-      "xp": 90
+      "xp": 290
     },
     {
       "id": "emp-105",
       "name": "Liam Hughes",
       "role": "Staff",
       "departmentId": "dept-hr",
-      "xp": 155
+      "xp": 90
     }
   ],
   "erpLog": [
@@ -405,26 +375,6 @@
       "qty": 50,
       "emissions": 47.5,
       "notes": "Marketing pamphlets print order"
-    },
-    {
-      "id": "erp-mrhmj21o",
-      "departmentId": "dept-hr",
-      "date": "2026-07-12",
-      "categoryId": "cat-fleet",
-      "emissionFactorId": "ef-diesel",
-      "qty": 5,
-      "emissions": 13.4,
-      "notes": "Operational log for Fleet Fuel (Diesel)"
-    },
-    {
-      "id": "erp-mrhmjhlp",
-      "departmentId": "dept-rd",
-      "date": "2026-07-12",
-      "categoryId": "cat-fleet",
-      "emissionFactorId": "ef-diesel",
-      "qty": 5,
-      "emissions": 13.4,
-      "notes": "Operational log for Fleet Fuel (Diesel)"
     }
   ],
   "csrActivities": [
@@ -455,8 +405,8 @@
       "employeeId": "emp-102",
       "date": "2026-07-10",
       "hours": 5,
-      "status": "Approved",
-      "evidence": "photo.jpg"
+      "status": "Pending Approval",
+      "evidence": null
     }
   ],
   "policyAcknowledgements": [
@@ -564,16 +514,6 @@
       "employeeId": "emp-102",
       "badgeId": "badge-xp-milestone",
       "date": "2026-07-10"
-    },
-    {
-      "employeeId": "emp-105",
-      "badgeId": "badge-carbon-starter",
-      "date": "2026-07-12"
-    },
-    {
-      "employeeId": "emp-102",
-      "badgeId": "badge-carbon-starter",
-      "date": "2026-07-12"
     }
   ],
   "redemptions": [
@@ -583,20 +523,6 @@
       "rewardId": "rew-cup",
       "date": "2026-07-06",
       "cost": 100
-    },
-    {
-      "id": "red-mrhpu81f",
-      "employeeId": "emp-101",
-      "rewardId": "rew-cup",
-      "date": "2026-07-12",
-      "cost": 100
-    },
-    {
-      "id": "red-mrhpyism",
-      "employeeId": "emp-104",
-      "rewardId": "rew-tree",
-      "date": "2026-07-12",
-      "cost": 200
     }
   ],
   "notifications": [
@@ -615,46 +541,6 @@
       "message": "Congratulations! You unlocked the Eco Starter badge.",
       "date": "2026-07-02",
       "unread": false
-    },
-    {
-      "id": "notif-mrhmj21p",
-      "employeeId": "emp-105",
-      "type": "badge",
-      "message": "Badge Unlocked: Eco Starter! Earned +50 XP.",
-      "date": "2026-07-12",
-      "unread": true
-    },
-    {
-      "id": "notif-mrhmjhlp",
-      "employeeId": "emp-102",
-      "type": "badge",
-      "message": "Badge Unlocked: Eco Starter! Earned +50 XP.",
-      "date": "2026-07-12",
-      "unread": true
-    },
-    {
-      "id": "notif-mrhpd733",
-      "employeeId": "emp-102",
-      "type": "approval",
-      "message": "Your CSR Volunteer Hours for 'Coastal Cleanup Drive' have been approved!",
-      "date": "2026-07-12",
-      "unread": true
-    },
-    {
-      "id": "notif-mrhpu81f",
-      "employeeId": "emp-101",
-      "type": "approval",
-      "message": "Successfully redeemed reward: Eco Ceramic Coffee Mug for 100 XP! Check your email.",
-      "date": "2026-07-12",
-      "unread": true
-    },
-    {
-      "id": "notif-mrhpyism",
-      "employeeId": "emp-104",
-      "type": "approval",
-      "message": "Successfully redeemed reward: Plant a Native Tree for 200 XP! Check your email.",
-      "date": "2026-07-12",
-      "unread": true
     }
   ]
 }
