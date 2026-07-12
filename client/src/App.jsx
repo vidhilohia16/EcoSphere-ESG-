@@ -150,10 +150,7 @@ export default function App() {
           </li>
         </ul>
 
-        <div className="sidebar-footer">
-          <div>Client Engine Active</div>
-          <div style={{ color: 'var(--primary)' }}>Node Express Proxy</div>
-        </div>
+
       </aside>
 
       {/* Main Panel Content Area */}
@@ -177,7 +174,7 @@ export default function App() {
             >
               ☰
             </button>
-            <span className="status-badge status-online">Proxy Live</span>
+
           </div>
 
           {/* Active Employee Role Selector */}
